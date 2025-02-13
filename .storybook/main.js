@@ -44,6 +44,9 @@ const config = {
 
     return config;
   },
+  docs: {
+    autodocs: true
+  },
   // Add this for GitHub Pages
   baseUrl: '/storybook-shoelace/',
 };

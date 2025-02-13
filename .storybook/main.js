@@ -47,8 +47,11 @@ const config = {
   docs: {
     autodocs: true
   },
-  // Add this for GitHub Pages
-  baseUrl: '/storybook-shoelace/',
+  // Update this section
+  managerHead: (head) => `
+    ${head}
+    <base href="/storybook-shoelace/">
+  `,
 };
 
 export default config;

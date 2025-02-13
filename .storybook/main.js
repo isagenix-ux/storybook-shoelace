@@ -12,6 +12,12 @@ const config = {
     name: "@storybook/react-webpack5",
     options: {},
   },
+  viteFinal: async (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/storybook-shoelace/';
+    }
+    return config;
+  },
   webpackFinal: async (config) => {
     // Remove any existing CSS rules
     config.module.rules = config.module.rules.filter(
